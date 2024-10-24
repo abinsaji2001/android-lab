@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         lastNameEditText = findViewById(R.id.lastName);
         emailEditText = findViewById(R.id.email);
         phoneEditText = findViewById(R.id.phone);
-        passwordEditText = findViewById(R.id.password);
-        dobEditText = findViewById(R.id.dob);
+
         genderRadioGroup = findViewById(R.id.radioGroup2);
         signUpButton = findViewById(R.id.button);
 
@@ -48,8 +47,7 @@ public class MainActivity extends AppCompatActivity {
         String lastName = lastNameEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
         String phone = phoneEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString().trim();
-        String dob = dobEditText.getText().toString().trim();
+
 
         if (TextUtils.isEmpty(firstName)) {
             showToast("First Name is required");
@@ -67,14 +65,7 @@ public class MainActivity extends AppCompatActivity {
             showToast("Valid Phone Number is required");
             return false;
         }
-        if (TextUtils.isEmpty(password)) {
-            showToast("Password is required");
-            return false;
-        }
-        if (TextUtils.isEmpty(dob)) {
-            showToast("Date of Birth is required");
-            return false;
-        }
+
 
         int selectedId = genderRadioGroup.getCheckedRadioButtonId();
         if (selectedId == -1) {
@@ -93,8 +84,7 @@ public class MainActivity extends AppCompatActivity {
         String lastName = lastNameEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
         String phone = phoneEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString().trim();
-        String dob = dobEditText.getText().toString().trim();
+
 
         int selectedId = genderRadioGroup.getCheckedRadioButtonId();
         RadioButton selectedGenderRadioButton = findViewById(selectedId);
@@ -104,8 +94,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("LastName", lastName);
         editor.putString("Email", email);
         editor.putString("Phone", phone);
-        editor.putString("Password", password);
-        editor.putString("DOB", dob);
+
         editor.putString("Gender", gender);
 
         editor.apply();

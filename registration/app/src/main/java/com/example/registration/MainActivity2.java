@@ -21,8 +21,8 @@ public class MainActivity2 extends AppCompatActivity {
         emailTextView = findViewById(R.id.emailTextView);
         phoneTextView = findViewById(R.id.phoneTextView);
         passwordTextView = findViewById(R.id.passwordTextView);
-        dobTextView = findViewById(R.id.dobTextView);
-        genderTextView = findViewById(R.id.genderTextView);
+
+
 
         // Load and display user data
         loadData();
@@ -44,7 +44,6 @@ public class MainActivity2 extends AppCompatActivity {
         emailTextView.setText("Email: " + email);
         phoneTextView.setText("Phone: " + phone);
         passwordTextView.setText("Password: " + password);
-        dobTextView.setText("Date of Birth: " + dob);
-        genderTextView.setText("Gender: " + gender);
+
     }
 }

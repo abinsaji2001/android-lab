@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Login(View view) {
-        String User = "a@gmail.com";
+        String User = "Jacob@gmail.com";
         String Password = "123";
         String user = String.valueOf(ed1.getText());
         String password = String.valueOf(pass.getText());
